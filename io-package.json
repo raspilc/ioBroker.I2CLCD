@@ -1,0 +1,77 @@
+{
+	"common": {
+		"name": "raspilc20x4lcd",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "20x4-I2C-LCD",
+		"titleLang": {
+			"en": "20x4-I2C-LCD",
+			"de": "20x4-I2C-LCD",
+			"ru": "20x4-I2C-LCD",
+			"pt": "LCD 20x4-I2C",
+			"nl": "20x4-I2C-LCD",
+			"fr": "20x4-I2C-LCD",
+			"it": "20x4-I2C-LCD",
+			"es": "20x4-I2C-LCD",
+			"pl": "20x4-I2C-LCD",
+			"zh-cn": "器20x4-I2C-LCD"
+		},
+		"desc": {
+			"en": "I2C-LCD 20x4 Display",
+			"de": "I2C-LCD 20x4 Anzeige",
+			"ru": "Дисплей I2C-LCD 20x4",
+			"pt": "Visor I2C-LCD 20x4",
+			"nl": "I2C-LCD 20x4 scherm",
+			"fr": "Écran I2C-LCD 20x4",
+			"it": "Display I2C-LCD 20x4",
+			"es": "Pantalla I2C-LCD 20x4",
+			"pl": "Wyświetlacz I2C-LCD 20x4",
+			"zh-cn": "I2C-LCD 20x4显示器"
+		},
+		"authors": [
+			"raspilc <info@raspilc.de>"
+		],
+		"keywords": [
+			"lcd",
+			"i2c",
+			"display",
+			"iobroker"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "raspilc20x4lcd.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/raspilc/ioBroker.raspilc20x4lcd/master/admin/raspilc20x4lcd.png",
+		"readme": "https://github.com/raspilc/ioBroker.raspilc20x4lcd/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "hardware",
+		"compact": true,
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=1.4.2"
+			}
+		]
+	},
+	"native": {
+		"Address": 39,
+		"mySelect": "20x4"
+	},
+	"objects": [],
+	"instanceObjects": []
+}
