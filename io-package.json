@@ -1,0 +1,112 @@
+{
+  "common": {
+    "name": "i2clcd",
+    "version": "0.0.5",
+    "news": {
+      "0.0.5": {
+        "en": "fixed some errors",
+        "de": "Feher bereinigt",
+        "ru": "choice of bus no added",
+        "pt": "choice of bus no added",
+        "nl": "choice of bus no added",
+        "fr": "choice of bus no added",
+        "it": "choice of bus no added",
+        "es": "choice of bus no added",
+        "pl": "choice of bus no added",
+        "zh-cn": "首次出版"
+      },
+      "0.0.3": {
+        "en": "fixed error in bus choice",
+        "de": "Fehler Bus-Auswahl bereinigt",
+        "ru": "choice of bus no added",
+        "pt": "choice of bus no added",
+        "nl": "choice of bus no added",
+        "fr": "choice of bus no added",
+        "it": "choice of bus no added",
+        "es": "choice of bus no added",
+        "pl": "choice of bus no added",
+        "zh-cn": "首次出版"
+      },
+      "0.0.2": {
+        "en": "choice of bus no added",
+        "de": "Auswahl Bus-Nr. hinzugefügt",
+        "ru": "choice of bus no added",
+        "pt": "choice of bus no added",
+        "nl": "choice of bus no added",
+        "fr": "choice of bus no added",
+        "it": "choice of bus no added",
+        "es": "choice of bus no added",
+        "pl": "choice of bus no added",
+        "zh-cn": "首次出版"
+      },
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      }
+    },
+    "title": "i2clcd",
+    "titleLang": {
+      "en": "i2clcd",
+      "de": "i2clcd",
+      "ru": "i2clcd",
+      "pt": "i2clcd",
+      "nl": "i2clcd",
+      "fr": "i2clcd",
+      "it": "i2clcd",
+      "es": "i2clcd",
+      "pl": "i2clcd",
+      "zh-cn": "器i2clcd"
+    },
+    "desc": {
+      "en": "I2C-LCD Display",
+      "de": "I2C-LCD Anzeige",
+      "ru": "Дисплей I2C-LCD",
+      "pt": "Visor I2C-LCD",
+      "nl": "I2C-LCD scherm",
+      "fr": "Écran I2C-LCD",
+      "it": "Display I2C-LCD",
+      "es": "Pantalla I2C-LCD",
+      "pl": "Wyświetlacz I2C-LCD",
+      "zh-cn": "I2C-LCD 显示器"
+    },
+    "authors": [
+      "raspilc <info@raspilc.de>"
+    ],
+    "keywords": [
+      "lcd",
+      "i2c",
+      "display",
+      "iobroker"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "i2clcd.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/raspilc/ioBroker.i2clcd/master/admin/i2clcd.png",
+    "readme": "https://github.com/raspilc/ioBroker.i2clcd/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "hardware",
+    "compact": true,
+    "materialize": true,
+    "dependencies": [{
+      "js-controller": ">=1.4.2"
+    }]
+  },
+  "native": {
+    "Address": 39,
+    "mySelect": "20x4",
+    "Bus": "1"
+  },
+  "objects": [],
+  "instanceObjects": []
+}
