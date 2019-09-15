@@ -156,13 +156,12 @@ class i2clcd extends utils.Adapter {
 
     // in this template all states changes inside the adapters namespace are subscribed
     this.subscribeStates("*");
-this.log.info("Bus-Nr.:" + typeof this.config.Bus)
 
     if (this.config.mySelect === "16x2") {
-      lcd = new LCD(this.config.Bus, Number(this.config.Address), 16, 2);
+      lcd = new LCD(Number(this.config.Bus), Number(this.config.Address), 16, 2);
       await initializing(this);
     } else if (this.config.mySelect === "20x4") {
-      lcd = new LCD(this.config.Bus, Number(this.config.Address), 20, 4);
+      lcd = new LCD(Number(this.config.Bus), Number(this.config.Address), 20, 4);
       await initializing(this);
     };
     lcd.clear();
