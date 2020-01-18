@@ -21,7 +21,7 @@ should also run on Tinkerboard
 
 Enable I2C on your device (raspi-config etc.) and
 wire the display to the I2C-bus.
-Install the adapter, set up bus no, I2C-address and choose your type of display in the configuration.
+Install the adapter, set up bus no, I2C-address (as decimal value!) and choose your type of display in the configuration.
 
 Datapoints:
 
