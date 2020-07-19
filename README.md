@@ -14,7 +14,7 @@
 
 I2C-LCD 16x2 or 20x4 Display based on HD44780-compatible Displays with PCF8574
 
-tested on Raspberry Pi 3B+
+tested on Raspberry Pi 3B+ and Raspbery Pi 4
 should also run on Tinkerboard
 
 ### using this adapter
