@@ -32,6 +32,8 @@ Datapoints:
 
 Adapter based on node.js-library lcdi2c (https://www.npmjs.com/package/lcdi2c)
 
+Works with Nodejs 10 only! WIP...
+
 ## Changelog
 
 ### 0.0.5
