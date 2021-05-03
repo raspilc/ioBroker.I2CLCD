@@ -294,7 +294,12 @@ function stopblink(status) {
 
 function initializing(self) {
   //let self = this;
-  lcd.beginSync();
+    try {
+  	lcd.beginSync();
+  } catch (e) {
+	self.log.error("Cant initialize display" + e);
+  }
+
   self.log.info("States initialisiert...")
   self.getStateAsync('DisplayLightOn', function(err, state) {
     if (state == null) {
