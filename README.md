@@ -36,6 +36,9 @@ Works with Nodejs 10 only! WIP...
 
 ## Changelog
 
+### 0.0.8
+* (raspilc) rework to make compatible with nodejs 12/14
+
 ### 0.0.5
 * (raspilc) fixed some errors
 
