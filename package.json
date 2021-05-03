@@ -1,6 +1,6 @@
 {
   "_from": "https://github.com/raspilc/ioBroker.i2clcd/tarball/master",
-  "_id": "iobroker.i2clcd@0.0.5",
+  "_id": "iobroker.i2clcd@0.0.8",
   "_inBundle": false,
   "_integrity": "sha512-GtbfmPstRnd8FSFVGus89zxTgdXMUkEJAfOOtIoHJrKBhLxChF08eGfZ6bavDiMj3T+3k2RQYCT5QZqXHA67vg==",
   "_location": "/iobroker.i2clcd",
@@ -29,8 +29,8 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@iobroker/adapter-core": "^2.0.0",
-    "lcdi2c": "^1.0.6"
+    "@iobroker/adapter-core": "^2.4.0",
+    "raspberrypi-liquid-crystal": "^1.15.0"
   },
   "deprecated": false,
   "description": "I2C-LCD Display",
@@ -49,7 +49,7 @@
     "chai-as-promised": "^7.1.1",
     "eslint": "^6.3.0",
     "gulp": "^4.0.2",
-    "lcdi2c": "^1.0.6",
+    "raspberrypi-liquid-crystal": "^1.15.0",
     "mocha": "^6.2.0",
     "proxyquire": "^2.1.3",
     "sinon": "^7.4.2",
@@ -81,5 +81,5 @@
     "test:package": "mocha test/package --exit",
     "test:unit": "mocha test/unit --exit"
   },
-  "version": "0.0.5"
+  "version": "0.0.8"
 }
