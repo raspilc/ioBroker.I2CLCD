@@ -30,9 +30,8 @@ Datapoints:
 "DisplayBlinkTime" sets up the Interval for "DisplayBlink"
 "DisplayLine1"..."DisplayLine4" writes the user-defined text to the desired line
 
-Adapter based on node.js-library lcdi2c (https://www.npmjs.com/package/lcdi2c)
+Adapter based on node.js-library raspberrypi-liquid-crystal (https://www.npmjs.com/package/raspberrypi-liquid-crystal)
 
-Works with Nodejs 10 only! WIP...
 
 ## Changelog
 
