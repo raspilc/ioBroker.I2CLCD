@@ -163,9 +163,8 @@ class i2clcd extends utils.Adapter {
     } else if (this.config.mySelect === "20x4") {
       lcd = new LCD(Number(this.config.Bus), Number(this.config.Address), 20, 4);
       await initializing(this);
-    };
-    lcd.begin();	
-    lcd.clear();
+    };	
+    //lcd.clearSync();
   }
 
   /**
@@ -199,24 +198,24 @@ class i2clcd extends utils.Adapter {
     if (id === (this.namespace + '.' + 'DisplayLine1')) {
       var Zeile = state.val;
       while (Zeile.length < 20) Zeile = Zeile + " ";
-      lcd.printLineSync(Zeile, 1);
+      lcd.printLineSync(0, Zeile);
     } else if (id === (this.namespace + '.' + 'DisplayLine2')) {
       var Zeile = state.val;
       while (Zeile.length < 20) Zeile = Zeile + " ";
-      lcd.printLineSync(Zeile, 2);
+      lcd.printLineSync(1, Zeile);
     } else if (id === (this.namespace + '.' + 'DisplayLine3')) {
       var Zeile = state.val;
       while (Zeile.length < 20) Zeile = Zeile + " ";
-      lcd.printLineSync(Zeile, 3);
+      lcd.printLineSync(2, Zeile);
     } else if (id === (this.namespace + '.' + 'DisplayLine4')) {
       var Zeile = state.val;
       while (Zeile.length < 20) Zeile = Zeile + " ";
-      lcd.printLineSync(Zeile, 4);
+      lcd.printLineSync(3, Zeile);
     } else if (id === (this.namespace + '.' + 'DisplayLightOn')) {
       if (state.val) {
-        lcd.on();
+        lcd.display();
       } else {
-        lcd.off();
+        lcd.noDisplay();
       };
     } else if (id === (this.namespace + '.' + 'DisplayBlink')) {
       if (state.val) {
@@ -229,7 +228,8 @@ class i2clcd extends utils.Adapter {
         });
       };
     };
-    if (lcd.began) {
+    if (!lcd.began) {
+	lcd.beginSync();
       this.log.warn('Cannot write to LCD-Display!');
     };
   }
@@ -294,7 +294,7 @@ function stopblink(status) {
 
 function initializing(self) {
   //let self = this;
-
+  lcd.beginSync();
   self.log.info("States initialisiert...")
   self.getStateAsync('DisplayLightOn', function(err, state) {
     if (state == null) {
@@ -332,7 +332,7 @@ function initializing(self) {
     if (state == null) {
       self.setStateAsync('DisplayLine1', "Welcome");
     } else {
-      lcd.printLineSync(state.val, 1);
+      lcd.printLineSync(0, state.val);
     };
   });
 
@@ -340,7 +340,7 @@ function initializing(self) {
     if (state == null) {
       self.setStateAsync('DisplayLine2', "to");
     } else {
-      lcd.printLineSync(state.val, 2);
+      lcd.printLineSync(1, state.val);
     };
   });
 
@@ -348,7 +348,7 @@ function initializing(self) {
     if (state == null) {
       self.setStateAsync('DisplayLine3', "LCD-Adapter");
     } else {
-      lcd.printLineSync(state.val, 3);
+      lcd.printLineSync(2, state.val);
     };
   });
 
@@ -356,7 +356,7 @@ function initializing(self) {
     if (state == null) {
       self.setStateAsync('DisplayLine4', "...initialized!");
     } else {
-      lcd.printLineSync(state.val, 4);
+      lcd.printLineSync(3, state.val);
     };
   });
 };
@@ -366,18 +366,18 @@ function main() {
 
 
   this.getState('DisplayLine1', function(err, state) {
-    lcd.printLineSync(state.val, 1);
+    lcd.printLineSync(0, state.val);
   });
 
   this.getState('DisplayLine2', function(err, state) {
-    lcd.printLineSync(state.val, 2);
+    lcd.printLineSync(1, state.val);
   });
 
   this.getState('DisplayLine3', function(err, state) {
-    lcd.printLineSync(state.val, 3);
+    lcd.printLineSync(2, state.val);
   });
 
   this.getState('DisplayLine4', function(err, state) {
-    lcd.printLineSync(state.val, 4);
+    lcd.printLineSync(3, state.val);
   });
 };
